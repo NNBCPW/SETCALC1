@@ -3,39 +3,47 @@ import streamlit as st
 # Title of the app
 st.title("Culvert Pipe Set Calculator")
 
-# Inject CSS for light and dark mode
+# DOS-style design
 st.markdown("""
     <style>
-        :root {
-            --text-color: black; /* Default for light mode */
-            --background-color: white; /* Default for light mode */
-        }
-        [data-theme="dark"] {
-            --text-color: white;
-            --background-color: black;
+        body {
+            background-color: black;
+            color: green;
+            font-family: 'Courier New', Courier, monospace;
         }
         .result {
-            font-size: 30px;
-            color: var(--text-color);
-            background-color: var(--background-color);
+            font-size: 20px;
+            color: green;
+            background-color: black;
+            border: 2px solid green;
             padding: 10px;
-            border-radius: 5px;
             display: inline-block;
+        }
+        .input-field {
+            color: green;
+            background-color: black;
+            border: 2px solid green;
+            padding: 5px;
+            margin-bottom: 10px;
+            width: 100%;
+        }
+        h3, h1, h2, label {
+            color: green;
         }
     </style>
 """, unsafe_allow_html=True)
 
 # Input fields
-pipe_size = st.number_input("Pipe Size (inches)", value=15, step=1)
-cover = st.number_input("Cover (inches)", value=9, step=1)
-ratio = st.number_input("Ratio (e.g., 4 for 4:1)", value=4, step=1)
+pipe_size = st.number_input("Pipe Size (inches)", value=15, step=1, format="%.0f")
+cover = st.number_input("Cover (inches)", value=9, step=1, format="%.0f")
+ratio = st.number_input("Ratio (e.g., 4 for 4:1)", value=4, step=1, format="%.0f")
 
 # Calculation
 set_length = (pipe_size + cover) * ratio / 12
 
-# Display result with dynamic colors
+# Display result in DOS-style format
 st.markdown("<h3>Set Length (feet)</h3>", unsafe_allow_html=True)
-st.markdown(f"<div class='result'>{round(set_length, 2)}</div>", unsafe_allow_html=True)
+st.markdown(f"<div class='result'>Set Length: {round(set_length, 2)} feet</div>", unsafe_allow_html=True)
 
 # Notes
 st.markdown("### Notes")
