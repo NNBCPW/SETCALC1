@@ -17,7 +17,7 @@ st.markdown("<h3>Set Length (feet)</h3>", unsafe_allow_html=True)
 st.markdown(f"<p style='font-size:40px; color:red;'>{round(set_length, 2)}</p>", unsafe_allow_html=True)
 
 # Display Diameter + 12 result with larger font size
-st.markdown("<h3>Diameter of pipe + 12&quot; toe down flat spot (inches)</h3>", unsafe_allow_html=True)
+st.markdown("<h3>Diameter + 12'' Toe down Flat spot</h3>", unsafe_allow_html=True)
 st.markdown(f"<p style='font-size:40px; color:red;'>{round(diameter_plus_12, 2)} in</p>", unsafe_allow_html=True)
 
 
