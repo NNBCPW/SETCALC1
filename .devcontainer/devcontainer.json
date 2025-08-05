@@ -3,33 +3,37 @@ import streamlit as st
 # Title of the app
 st.title("Culvert Pipe Set Calculator")
 
-# Eye-friendly custom styling
+# Softer, light-theme custom styling
 st.markdown("""
     <style>
-        body {
-            background-color: #2E3B4E;
-            color: #E0E0E0;
+        /* Set the full app background */
+        .stApp {
+            background-color: #F4F4F4;
+            color: #333333;
             font-family: 'Segoe UI', sans-serif;
         }
+
+        /* Input label and headings */
+        h1, h2, h3, label {
+            color: #1E1E1E;
+        }
+
+        /* Result styling */
         .result {
             font-size: 20px;
-            color: #D2F4F1;
-            background-color: #1C2A38;
-            border: 2px solid #6ECEDA;
+            color: #0B4F6C;
+            background-color: #E1F5F9;
+            border: 2px solid #5AB9EA;
             padding: 10px;
             display: inline-block;
             border-radius: 6px;
         }
-        .input-field {
-            color: #E0E0E0;
-            background-color: #2E3B4E;
-            border: 2px solid #6ECEDA;
-            padding: 5px;
-            margin-bottom: 10px;
-            width: 100%;
-        }
-        h1, h2, h3, label {
-            color: #D2F4F1;
+
+        /* Remove glow and make input boxes blend better */
+        input {
+            background-color: #FFFFFF !important;
+            color: #000000 !important;
+            border: 1px solid #CCCCCC !important;
         }
     </style>
 """, unsafe_allow_html=True)
