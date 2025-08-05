@@ -3,32 +3,33 @@ import streamlit as st
 # Title of the app
 st.title("Culvert Pipe Set Calculator")
 
-# DOS-style design
+# Eye-friendly custom styling
 st.markdown("""
     <style>
         body {
-            background-color: black;
-            color: green;
-            font-family: 'Courier New', Courier, monospace;
+            background-color: #2E3B4E;
+            color: #E0E0E0;
+            font-family: 'Segoe UI', sans-serif;
         }
         .result {
             font-size: 20px;
-            color: green;
-            background-color: black;
-            border: 2px solid green;
+            color: #D2F4F1;
+            background-color: #1C2A38;
+            border: 2px solid #6ECEDA;
             padding: 10px;
             display: inline-block;
+            border-radius: 6px;
         }
         .input-field {
-            color: green;
-            background-color: black;
-            border: 2px solid green;
+            color: #E0E0E0;
+            background-color: #2E3B4E;
+            border: 2px solid #6ECEDA;
             padding: 5px;
             margin-bottom: 10px;
             width: 100%;
         }
-        h3, h1, h2, label {
-            color: green;
+        h1, h2, h3, label {
+            color: #D2F4F1;
         }
     </style>
 """, unsafe_allow_html=True)
@@ -41,7 +42,7 @@ ratio = st.number_input("Ratio (e.g., 4 for 4:1)", value=4, step=1, format="%.0f
 # Calculation
 set_length = (pipe_size + cover) * ratio / 12
 
-# Display result in DOS-style format
+# Display result
 st.markdown("<h3>Set Length (feet)</h3>", unsafe_allow_html=True)
 st.markdown(f"<div class='result'>Set Length: {round(set_length, 2)} feet</div>", unsafe_allow_html=True)
 
