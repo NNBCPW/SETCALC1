@@ -36,6 +36,49 @@ st.markdown("""
         }
     </style>
 """, unsafe_allow_html=True)
+import streamlit as st
+
+# Force override Streamlit's full background using correct targets
+st.markdown("""
+    <style>
+        /* Target main background container */
+        .stApp {
+            background-color: #f7f7f7 !important;  /* Soft gray */
+        }
+
+        /* Override central block background */
+        .block-container {
+            background-color: #f7f7f7 !important;
+            color: #1c1c1c !important;
+        }
+
+        /* Adjust input and text */
+        input, textarea {
+            background-color: #ffffff !important;
+            color: #000000 !important;
+        }
+
+        h1, h2, h3, label, .stTextInput > label {
+            color: #111111 !important;
+        }
+
+        /* Fix for slider track */
+        .stSlider > div {
+            background-color: #e6e6e6 !important;
+        }
+
+        /* Custom result box */
+        .result {
+            font-size: 18px;
+            background-color: #e0f7fa;
+            color: #004d40;
+            border: 2px solid #26c6da;
+            padding: 10px;
+            border-radius: 6px;
+            display: inline-block;
+        }
+    </style>
+""", unsafe_allow_html=True)
 
 # Title
 st.title("Culvert Pipe Set Calculator")
