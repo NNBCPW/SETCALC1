@@ -16,8 +16,16 @@ diameter_plus_12 = pipe_size + 12
 st.markdown("<h3>Set Length (feet)</h3>", unsafe_allow_html=True)
 st.markdown(f"<p style='font-size:40px; color:red;'>{round(set_length, 2)} ft</p>", unsafe_allow_html=True)
 
-# ✅ Display correctly formatted heading for pipe + 12'' toe down
-st.markdown("<h3>Diameter + 12'' Toe down Flat spot</h3>", unsafe_allow_html=True)
+# ✅ FORCE EXACT CUSTOM LABEL: Diameter + 12'' Toe down Flat spot
+st.markdown("""
+    <div style="margin-top: 30px;">
+        <span style="font-size: 24px; font-weight: bold;">
+            Diameter + 12'' Toe down Flat spot
+        </span>
+    </div>
+""", unsafe_allow_html=True)
+
+# Red result output
 st.markdown(f"<p style='font-size:40px; color:red;'>{round(diameter_plus_12, 2)} in</p>", unsafe_allow_html=True)
 
 # Notes section
